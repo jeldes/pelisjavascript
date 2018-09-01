@@ -1,0 +1,19 @@
+body{
+	background:url(../imagenes/fondo2.jpg);
+	background-repeat: no-repeat;
+	background-position: center 0;
+	}
+
+.combo{
+margin: 1%;
+padding:1%;
+}
+.a{
+	padding: 1%;
+	margin: 1%;
+}
+.espacio{
+border-width:1%;
+border-color: #81BEF7;
+border-style: solid;
+}
