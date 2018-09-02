@@ -28,3 +28,18 @@ $(function(){
 	return false;	
 	});
 });
+//guardar Pelicula
+$(function(){
+	$("#ingp").click(function(){
+		var url="registrarpeli.php";
+		$.ajax({
+			type:"post",
+			url:url,
+			data:$("#formp").serialize(),
+			success:function(data){
+				$("#resultado").html(data);
+			}
+		});
+	return false;	
+	});
+});	
