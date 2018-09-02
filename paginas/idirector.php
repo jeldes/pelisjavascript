@@ -1,4 +1,4 @@
-<?php require('bd/bdgeneros.php'); ?>
+<?php require('bd/bddirector.php'); ?>
 <!DOCTYPE html>
 <?php 
 session_start();
@@ -10,27 +10,25 @@ if (@! $_SESSION['email']) {
 <head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<title>Ingrese Genero</title>
+	<title>Ingrese Director/a</title>
 	<script src="/Pelis/includes/js/jquery-3.3.1.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="/Pelis/includes/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="/Pelis/includes/estilos.css">	
 </head>
 <body>
 <?php require("barra.php");  ?>
-
 <div class="container">
 	<div class="panel panel-primary">
-	    <div class="panel-heading"><h3>Ingrese Genero</h3></div>
+	    <div class="panel-heading"><h3>Ingrese Director/a</h3></div>
 		<div class="panel-body">
-			<form id="formulario" method="post">
+			<form id="formd" method="post">
 				<div class="input-group">
-			    <input type="text"  class="form-control" placeholder="Ingrese Genero"  id="gen" name="gen" >
+			    <input type="text" class="form-control" placeholder="Ingrese Director" name="direc" id="direc">
 			    <div class="input-group-btn">
-			      <button class="btn btn-default" name="ingg" id="ingg" type="button" onclick="return validagen()">
+			      <button class="btn btn-default" name="ingd" id="ingd" type="button" onclick="return validadir()">
 			        Ingresar
 			      </button>
 			    </div>
-							</div>
 			  	
 				</div>
 				<div id="resultado"></div>
@@ -40,16 +38,16 @@ if (@! $_SESSION['email']) {
 </div>
 <div class="container">
 	<div class="panel panel-primary">
-	    <div class="panel-heading"><h3>Lista de Generos</h3></div>
+	    <div class="panel-heading"><h3>Lista de Directores</h3></div>
 		<div class="panel-body">
 			<table class="table table-striped">
 			    <thead>
 			      <tr>
-			        <th>Generos</th> 
+			        <th>Director</th> 
 			      </tr>
 			    </thead>
 			    <tbody>
-			      	<?php require('lista/listageneros.php');  ?>
+			      	<?php require('lista/listadirector.php');  ?>
 			    </tbody>
 			  </table>
 			

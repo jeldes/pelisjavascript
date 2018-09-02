@@ -38,7 +38,7 @@ if (@! $_SESSION['email']) {
 			      </tr>
 			    </thead>
 			    <tbody>
-			      	<?php require("listapeliculas.php")  	 ?>
+			      	<?php require("lista/listapeliculas.php")  	 ?>
 			    </tbody>
 			  </table>
 		</div>

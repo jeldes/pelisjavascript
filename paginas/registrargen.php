@@ -7,11 +7,15 @@ if (@! $_SESSION['email']) {
 <?php  
 require("bd/bdgeneros.php");
 $resultado="";
+if ($_REQUEST['gen']=="") {
+	echo "<center><h3>Debe ingresar genero</h3></center>";
+	exit;
+}
 	for($n=0; $n<$genero; $n++){
 					if ($_REQUEST['gen']==$genero[NombreG]) {
 						$genero=mysql_fetch_array($yu);
-						echo "<script>Genero ya existe</script>";
-						$resultado="<p>El genero ".$_REQUEST['gen']." ha sido encontrado</p>" 
+						echo "<center><h3>Genero ya existe</h3></center>";
+						exit;
 
 						goto aqui;
 					}
@@ -20,7 +24,9 @@ $resultado="";
 			      } 
 			      mysql_query("INSERT INTO todopeliculas.generos (idGenero, NombreG) VALUES (NULL,'".$_REQUEST['gen']."')");
 				mysql_close($conexion);
-				header("location:igenero.php");
+				echo "<center><h3>ingresado el genero $genero</h3></center>";
+				//header("location:igenero.php");
+				
 				 aqui:
 				 echo " ";
 

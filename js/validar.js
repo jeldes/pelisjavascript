@@ -19,6 +19,14 @@ function validagen() {
 		return false;
 	}
 }
+function validadir() {
+	var direc;
+	direc=document.getElementById("direc").value;
+	if(direc==""){
+		alert("Debe ingresar informacion");
+		return false;
+	}
+}
 
 function myFunction() {
   var input, filter, table, tr, td, i;
