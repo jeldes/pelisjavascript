@@ -43,3 +43,34 @@ $(function(){
 	return false;	
 	});
 });	
+//Guardar usuario
+$(function(){
+	$("#ingu").click(function(){
+		var url="registraruser.php";
+		$.ajax({
+			type:"post",
+			url:url,
+			data:$("#formu").serialize(),
+			success:function(data){
+				$("#resultado").html(data);
+			}
+		});
+	return false;	
+	});
+});	
+
+//modificar usuario
+$(function(){
+	$("#modu").click(function(){
+		var url="moduser.php";
+		$.ajax({
+			type:"post",
+			url:url,
+			data:$("#formm").serialize(),
+			success:function(data){
+				$("#resultado").html(data);
+			}
+		});
+	return false;	
+	});
+});		
