@@ -28,6 +28,16 @@ function validadir() {
 	}
 }
 
+function selim()
+{
+	var a
+	var preg=confirm("Realmente desea eliminar este registro?")
+	if (preg==false) {
+		return false;
+	}
+}
+
+
 function myFunction() {
   var input, filter, table, tr, td, i;
   input = document.getElementById("titulo");

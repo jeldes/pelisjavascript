@@ -15,10 +15,12 @@ if ($correo ==""){
 	echo "<script>location.href='/Pelis/index.php'</script>";		
 }
 
-
+	
 	$sql=mysqli_query($mysqli,"SELECT * FROM usuario WHERE Correo='$correo'");
+
 	if($f=mysqli_fetch_assoc($sql)){
 		if($pass==$f['Contrasena']){
+			
 			$_SESSION['email']=$f['Correo'];
 
 			header("Location:/Pelis/paginas/intro.php");
