@@ -31,8 +31,9 @@
 			      if ($_SESSION['email']=="n.jeldes@hotmail.com") {
 			        echo '<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Usuarios<span class="caret"></span></a>
 			        <ul class="dropdown-menu">
-			          <li><a href="http://localhost/Pelis/paginas/users.php">Lista</a></li>
 			          <li><a href="http://localhost/Pelis/paginas/inguser.php">Ingresar</a></li>
+			          <li><a href="http://localhost/Pelis/paginas/users.php">Lista</a></li>
+			          
 			        </ul>
 			      	</li>';		
 			        } 
