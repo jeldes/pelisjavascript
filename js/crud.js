@@ -7,6 +7,7 @@ $(function(){
 			url:url,
 			data:$("#formulario").serialize(),
 			success:function(data){
+				$('#tabla').load("lista/listageneros.php");
 				$("#resultado").html(data);
 			}
 		});
@@ -22,6 +23,7 @@ $(function(){
 			url:url,
 			data:$("#formd").serialize(),
 			success:function(data){
+				$('#tabla').load("lista/listadirector.php");
 				$("#resultado").html(data);
 			}
 		});

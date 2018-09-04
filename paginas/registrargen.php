@@ -24,8 +24,8 @@ if ($_REQUEST['gen']=="") {
 			      } 
 			      mysql_query("INSERT INTO todopeliculas.generos (idGenero, NombreG) VALUES (NULL,'".$_REQUEST['gen']."')");
 				mysql_close($conexion);
-				echo "<center><h3>ingresado el genero $genero</h3></center>";
-				//header("location:igenero.php");
+				echo "<center><h3>Ingresado el genero ".$_REQUEST['gen']."</h3></center>";
+				//header("location:../lista/listageneros.php");
 				
 				 aqui:
 				 echo " ";

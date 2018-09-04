@@ -41,17 +41,10 @@ if (@! $_SESSION['email']) {
 <div class="container">
 	<div class="panel panel-primary">
 	    <div class="panel-heading"><h3>Lista de Generos</h3></div>
-		<div class="panel-body">
-			<table class="table table-striped">
-			    <thead>
-			      <tr>
-			        <th>Generos</th> 
-			      </tr>
-			    </thead>
-			    <tbody>
-			      	<?php require('lista/listageneros.php');  ?>
-			    </tbody>
-			  </table>
+		<div class="panel-body" id="tabla">
+			
+			      	
+			   
 			
 		</div>
 	</div>
@@ -62,3 +55,8 @@ if (@! $_SESSION['email']) {
     <script src="/Pelis/includes/js/bootstrap.js"></script>
 </body>
 </html>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#tabla').load("lista/listageneros.php");
+	});
+</script>
