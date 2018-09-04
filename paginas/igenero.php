@@ -19,10 +19,23 @@ if (@! $_SESSION['email']) {
 <?php require("barra.php");  ?>
 
 <div class="container">
-	<div class="panel panel-primary">
-	    <div class="panel-heading"><h3>Ingrese Genero</h3></div>
-		<div class="panel-body">
-			<form id="formulario" method="post">
+	<button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModal">
+  Ingresar Genero
+</button>
+	
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel">Ingrese Genero</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <form id="formulario" method="post">
 				<div class="input-group">
 			    <input type="text"  class="form-control" placeholder="Ingrese Genero"  id="gen" name="gen" >
 			    <div class="input-group-btn">
@@ -35,9 +48,11 @@ if (@! $_SESSION['email']) {
 				</div>
 				<div id="resultado"></div>
 			</form>
-		</div>
-	</div>
+      
+    </div>
+  </div>
 </div>
+<div> </div>
 <div class="container">
 	<div class="panel panel-primary">
 	    <div class="panel-heading"><h3>Lista de Generos</h3></div>
