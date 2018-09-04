@@ -18,7 +18,7 @@ if (@! $_SESSION['email']) {
 <body>
 <?php require("barra.php");  ?>
 <div class="container">
-	<button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModal">
+	<button type="button" class="btn btn-light" data-toggle="modal" data-target="#direcmodal">
   		Ingresar Director/a
 	</button>
 	
@@ -35,11 +35,11 @@ if (@! $_SESSION['email']) {
 	</div>
 </div>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="direcmodal" tabindex="-1" role="dialog" aria-labelledby="direcmodalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title" id="exampleModalLabel">Ingrese Director/a</h3>
+        <h3 class="modal-title" id="direcmodalLabel">Ingrese Director/a</h3>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -61,6 +61,8 @@ if (@! $_SESSION['email']) {
     </div>
   </div>
 </div>
+
+
 
 	<script src="/Pelis/js/crud.js"></script>
 	<script src="/Pelis/js/validar.js"></script>

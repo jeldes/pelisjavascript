@@ -25,7 +25,7 @@ if ($_REQUEST['duraccion']=="" || $_REQUEST['duraccion']<1 ) {
 					$peliculas=mysql_fetch_array($ejecuta);
 				}
 
-				 	include('conexion.php');
+				 	include('bd/conexion.php');
 					//servidor,usuario y contraseña
 					if (!conexion) { /*la negacion del if*/
 						die('No he podido conectar: '.mysql_error());

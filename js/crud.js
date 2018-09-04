@@ -7,6 +7,7 @@ $(function(){
 			url:url,
 			data:$("#formulario").serialize(),
 			success:function(data){
+				$("#formulario")[0].reset();
 				$('#tabla').load("lista/listageneros.php");
 				$("#resultado").html(data);
 			}
@@ -23,6 +24,7 @@ $(function(){
 			url:url,
 			data:$("#formd").serialize(),
 			success:function(data){
+				$("#formd")[0].reset();
 				$('#tabla').load("lista/listadirector.php");
 				$("#resultado").html(data);
 			}
@@ -39,6 +41,8 @@ $(function(){
 			url:url,
 			data:$("#formp").serialize(),
 			success:function(data){
+				$("#formp")[0].reset();
+				$('#tabla').load("lista/listapeliculas.php");
 				$("#resultado").html(data);
 			}
 		});
@@ -54,6 +58,7 @@ $(function(){
 			url:url,
 			data:$("#formu").serialize(),
 			success:function(data){
+				$("#formu")[0].reset();
 				$("#resultado").html(data);
 			}
 		});
