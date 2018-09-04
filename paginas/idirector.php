@@ -18,10 +18,34 @@ if (@! $_SESSION['email']) {
 <body>
 <?php require("barra.php");  ?>
 <div class="container">
+	<button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModal">
+  		Ingresar Director/a
+	</button>
+	
+</div>
+
+<div> </div>
+
+<div class="container">
 	<div class="panel panel-primary">
-	    <div class="panel-heading"><h3>Ingrese Director/a</h3></div>
+	    <div class="panel-heading"><h3>Lista de Directores</h3></div>
 		<div class="panel-body">
-			<form id="formd" method="post">
+			<div class="panel-body" id="tabla">
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel">Ingrese Director/a</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <form id="formd" method="post">
 				<div class="input-group">
 			    <input type="text" class="form-control" placeholder="Ingrese Director" name="direc" id="direc">
 			    <div class="input-group-btn">
@@ -33,17 +57,11 @@ if (@! $_SESSION['email']) {
 				</div>
 				<div id="resultado"></div>
 			</form>
-		</div>
-	</div>
+      
+    </div>
+  </div>
 </div>
-<div class="container">
-	<div class="panel panel-primary">
-	    <div class="panel-heading"><h3>Lista de Directores</h3></div>
-		<div class="panel-body">
-			<div class="panel-body" id="tabla">
-		</div>
-	</div>
-</div>
+
 	<script src="/Pelis/js/crud.js"></script>
 	<script src="/Pelis/js/validar.js"></script>
     <script src="/Pelis/includes/js/jquery-1.11.2.js"></script>
