@@ -14,7 +14,7 @@ if (@! $_SESSION['email']) {
 	<title>Buscador</title>
 	<script src="/Pelis/includes/js/jquery-3.3.1.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="/Pelis/includes/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="/Pelis/includes/estilos.css">		
+	<link rel="stylesheet" type="text/css" href="/Pelis/includes/estilos.css">	
 </head>
 <?php require("barra.php");  ?>
 
@@ -55,33 +55,23 @@ if (@! $_SESSION['email']) {
 <div class="container">
 	<div class="panel panel-primary">
       <div class="panel-heading"><h1>Lista de Peliculas</h1></div>
-      	<div class="panel-body">
+      	<div class="panel-body" id="tabla">
         
-			  <table class="table table-striped" id="tabla" name="tabla">
-			    <thead>
-			      <tr>
-			        <th>Titulo</th>
-			        <th>Puntaje</th>
-			        <th>Clasificacion</th>
-			        <th>Año</th>
-			        <th>Duracion</th>
-			        <th>Pais</th>
-			        <th>Genero</th>
-			        <th>Director</th>
-			      </tr>
-			    </thead>
-			    <tbody>
-			      	<?php require("lista/listapeliculas.php")  	 ?>
-			    </tbody>
-			  </table>
+			  
 		</div>
 	</div>
 </div>
 
 
 
-<script  src="/Pelis/js/validar.js"></script>
-
- <script src="/Pelis/includes/js/bootstrap.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#tabla').load("lista/listapeliculas.php");
+	});
+</script>
+	<script src="/Pelis/js/crud.js"></script>
+	<script src="/Pelis/js/validar.js"></script>
+    <script src="/Pelis/includes/js/jquery-1.11.2.js"></script>
+    <script src="/Pelis/includes/js/bootstrap.js"></script>
 </body>
 </html>

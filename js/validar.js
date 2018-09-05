@@ -30,7 +30,7 @@ function validadir() {
 
 function selim()
 {
-	var preg=confirm("¿Realmente desea eliminar este registro?")
+	var preg=confirm("¿Realmente desea eliminar este registro?");
 	if (preg==false) {
 		return false;
 	}

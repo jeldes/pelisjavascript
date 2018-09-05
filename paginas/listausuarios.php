@@ -31,7 +31,7 @@
 			    		<td><?php echo $ver[3]; ?></td>
 			    		<td><?php echo $ver[4]; ?></td>
 			    		<td><button class="btn btn-default" type="submit" data-toggle="modal" data-target="#moduser" onclick="agregardatos('<?php echo $datos ?>')"><span class="glyphicon glyphicon-pencil" ></span></button></td>
-			    		<td><button class="btn btn-default" type="submit" data-toggle="modal" data-target="#eluser" onclick="return selim() ,eliminardatos('<?php echo $datos ?>')"><span class="glyphicon glyphicon-trash"></span></button></td>
+			    		<td><button class="btn btn-default" type="submit" data-toggle="modal" data-target="#eluser" onclick="eliminardatos('<?php echo $datos ?>')"><span class="glyphicon glyphicon-trash"></span></button></td>
 			    	</tr>
 						<?php } ?>
 			      	<?php
