@@ -6,13 +6,13 @@ if (@! $_SESSION['email']) {
 ?>
 <?php 
 
-$id= $_REQUEST['id'];
-$_REQUEST['user'];
-$nom= $_REQUEST['nom'];
-$ap= $_REQUEST['ap'];
-$con= $_REQUEST['con'];
+$id= $_REQUEST['mid'];
+$_REQUEST['muser'];
+$nom= $_REQUEST['mnom'];
+$ap= $_REQUEST['map'];
+$con= $_REQUEST['mcon'];
 
-if ($_REQUEST['id']=="") {
+if ($_REQUEST['mid']=="") {
 	echo "<center><h3>No hay id</h3></center>";
 	exit;
 }

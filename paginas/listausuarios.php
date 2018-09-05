@@ -1,33 +1,39 @@
-<?php
-	for($h=1; $h<$user; $h++){
-		echo "<tr>";
-		echo "<td>";
-		echo $user['Correo'];
-		echo "</td>";
-		echo "<td>";
-		echo $user['NombreU'];
-		echo "</td>";
-		echo "<td>";
-		echo $user['ApellidoU'];
-		echo "</td>";
-		echo "<td>";
-		echo $user['Contrasena'];
-		echo "</td>";
-		echo "<td>";
-		echo "</td>";
-		echo "<td>";
-		echo '<a href="modificau.php?id='.$user['IdUsuario'].'"><button class="btn btn-default" name="'.$h.'" type="submit"><span class="glyphicon glyphicon-pencil"></span></button></a>';
-		echo "</form>";
-		echo "</td>";
-		echo "<td>";
-		echo "</td>";
-		echo "<td>";
-		echo '<a onclick="return selim();" href="eluser.php?id='.$user['IdUsuario'].'"><button class="btn btn-default" name="'.$h.'" " type="submit"><span class="glyphicon glyphicon-trash"></span></button>';
-        
-		echo "</form>";
-		echo "</td>";
-		echo "<td>";
-		$user=mysql_fetch_array($pl);
-	} 
-	//<a href="eluser.php?id='.$user['IdUsuario'].'">
+<?php require('/bd/modifica.php'); 
+	$conexion=conexion();
+
 ?>
+
+			<table class="table table-striped" id="utabla">
+			    <thead>
+			      <tr>
+			        <th>Correo</th>
+			        <th>Nombre</th>
+			        <th>Apellido</th>
+			        <th>Contraseña</th>
+			        <th>Modificar</th>
+			        <th>Eliminar</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			    	<?php 
+
+			    		$sql="SELECT IdUsuario, Correo, NombreU, ApellidoU, Contrasena FROM usuario";
+			    		$result=mysqli_query($conexion, $sql);
+			    		while($ver=mysqli_fetch_row($result)){
+			    			$datos=$ver[0]."||".$ver[1]."||".$ver[2]."||".$ver[3]."||".$ver[4];
+
+			    		
+
+			    	 ?>
+			    	<tr>
+			    		<td><?php echo $ver[1]; ?></td>
+			    		<td><?php echo $ver[2]; ?></td>
+			    		<td><?php echo $ver[3]; ?></td>
+			    		<td><?php echo $ver[4]; ?></td>
+			    		<td><button class="btn btn-default" type="submit" data-toggle="modal" data-target="#moduser" onclick="agregardatos('<?php echo $datos ?>')"><span class="glyphicon glyphicon-pencil" ></span></button></td>
+			    		<td><button class="btn btn-default" type="submit" data-toggle="modal" data-target="#eluser" onclick="return selim() ,eliminardatos('<?php echo $datos ?>')"><span class="glyphicon glyphicon-trash"></span></button></td>
+			    	</tr>
+						<?php } ?>
+			      	<?php
+						
+

@@ -59,6 +59,7 @@ $(function(){
 			data:$("#formu").serialize(),
 			success:function(data){
 				$("#formu")[0].reset();
+				$('#tabla').load("listausuarios.php");
 				$("#resultado").html(data);
 			}
 		});
@@ -75,7 +76,24 @@ $(function(){
 			url:url,
 			data:$("#formm").serialize(),
 			success:function(data){
-				$("#resultado").html(data);
+				$('#tabla').load("listausuarios.php");
+				$("#res").html(data);
+			}
+		});
+	return false;	
+	});
+});	
+//Eliminar usuario
+$(function(){
+	$("#elu").click(function(){
+		var url="eluser.php";
+		$.ajax({
+			type:"post",
+			url:url,
+			data:$("#forme").serialize(),
+			success:function(data){
+				$('#tabla').load("listausuarios.php");
+				$("#resp").html(data);
 			}
 		});
 	return false;	

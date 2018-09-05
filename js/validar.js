@@ -30,13 +30,29 @@ function validadir() {
 
 function selim()
 {
-	var a
-	var preg=confirm("Realmente desea eliminar este registro?")
+	var preg=confirm("¿Realmente desea eliminar este registro?")
 	if (preg==false) {
 		return false;
 	}
 }
-
+//para el modal modificar
+function agregardatos(datos){
+	d=datos.split('||');
+	$('#muser').val(d[1]);
+	$('#mnom').val(d[2]);
+	$('#map').val(d[3]);
+	$('#mcon').val(d[4]);
+	$('#mid').val(d[0]);
+	
+}
+function eliminardatos(datos){
+	d=datos.split('||');
+	$('#elc').val(d[1]);
+	$('#enom').val(d[2]);
+	$('#eap').val(d[3]);
+	$('#econ').val(d[4]);
+	$('#eid').val(d[0]);
+}
 
 function myFunction() {
   var input, filter, table, tr, td, i;
@@ -81,3 +97,5 @@ $("#buscar").click(function(){
 });
 
 
+
+	

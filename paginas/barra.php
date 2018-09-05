@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
+
 <div class="container">	
 	<header>
 			<div class="container">
@@ -29,13 +24,8 @@
 			      </li>
 			      <?php
 			      if ($_SESSION['email']=="n.jeldes@hotmail.com") {
-			        echo '<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Usuarios<span class="caret"></span></a>
-			        <ul class="dropdown-menu">
-			          <li><a href="http://localhost/Pelis/paginas/inguser.php">Ingresar</a></li>
-			          <li><a href="http://localhost/Pelis/paginas/users.php">Lista</a></li>
-			          
-			        </ul>
-			      	</li>';		
+			      	echo '<li><a href="http://localhost/Pelis/paginas/users.php">Usuarios</a></li>';
+			        
 			        } 
 			      
 			      ?>
@@ -48,7 +38,4 @@
 			</nav>
 		</div>
 	
-	</header>
-</div>
-</body>
-</html>
+	

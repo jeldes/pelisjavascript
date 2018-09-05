@@ -1,6 +1,6 @@
 <?php 
 
-$id= $_REQUEST['id'];
+$id= $_REQUEST['eid'];
 
 include('bd/conexion.php');
 	if (!$conexion){
@@ -15,11 +15,11 @@ include('bd/conexion.php');
 					if(!$pl){
 						echo 'hay un error en la sentencia sql: '.$mn;
 					}else{
-					$user=mysql_fetch_array($pl);
+					//$user=mysql_fetch_array($pl);
 
 					}
 				}
 			}
-header("location:users.php");
+//header("location:users.php");
  ?>
  
